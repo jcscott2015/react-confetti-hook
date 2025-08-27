@@ -13,13 +13,13 @@ A React hook for adding delightful confetti animations to your React application
 ## Installation
 
 ```bash
-npm install @/react-confetti-hook
+npm install @react-confetti-hook
 ```
 
 ## Usage
 
 ```tsx
-import { useConfetti } from "@/react-confetti-hook";
+import { useConfetti } from "@react-confetti-hook";
 
 function CelebrationComponent() {
   const { fireConfetti, stopConfetti, isActive } = useConfetti();
