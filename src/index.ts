@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import { ConfettiBurst, type ConfettiOptions } from "../utils/confetti";
+import { ConfettiBurst, type ConfettiOptions } from "./utils/confetti";
 
 interface UseConfettiReturn {
   fireConfetti: (options?: ConfettiOptions) => void;

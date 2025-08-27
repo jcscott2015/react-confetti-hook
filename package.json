@@ -1,49 +1,40 @@
 {
-  "name": "react-library",
+  "name": "react-confetti-hook",
   "version": "1.0.0",
-  "description": "A React hook for adding confetti effects to your applications",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react-confetti-hook.umd.js",
+  "module": "./dist/react-confetti-hook.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/react-confetti-hook.es.js",
+      "require": "./dist/react-confetti-hook.umd.js"
+    }
+  },
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "tsc && vite build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "dev": "vite",
-    "lint": "eslint src/**/*.ts*",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "clean": "rm -rf dist"
+    "prepare": "npm run build"
   },
-  "keywords": [
-    "react",
-    "library",
-    "components",
-    "hooks",
-    "utilities"
-  ],
-  "author": "John C. Scott",
-  "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
-  "dependencies": {
-    "react": "^latest",
-    "react-dom": "^latest"
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^latest",
-    "@typescript-eslint/parser": "^latest",
-    "@vitejs/plugin-react": "^latest",
-    "eslint-plugin-react-hooks": "^latest",
-    "eslint-plugin-react-refresh": "^latest",
-    "eslint": "^latest",
-    "jsdom": "^latest",
-    "rollup-plugin-typescript2": "^latest",
-    "rollup": "^latest",
-    "typescript": "^latest",
-    "vite": "^latest",
-    "vitest": "^latest"
+    "@testing-library/react": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "jsdom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vite-plugin-dts": "latest",
+    "vitest": "latest"
   }
 }
